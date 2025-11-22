@@ -1,17 +1,13 @@
 'use client'
 import { 
   ChevronRight,
-  Gauge,
   Wallet,
   Calendar,
-  CheckCircle2,
-  AlertCircle,
   Car
 } from 'lucide-react'
-import { FirebaseError, initializeApp } from 'firebase/app'
-import { getFirestore, Firestore, collection, addDoc, setDoc, doc, serverTimestamp} from 'firebase/firestore'
-import { getAuth, onAuthStateChanged, signInAnonymously, Auth } from 'firebase/auth'
-import { getAnalytics } from 'firebase/analytics'
+import { initializeApp } from 'firebase/app'
+import { getFirestore, collection, setDoc, doc, serverTimestamp} from 'firebase/firestore'
+import { getAuth } from 'firebase/auth'
 import { FormEvent, useEffect, useState } from 'react'
 
 /* Firebase Configuration */
@@ -27,9 +23,9 @@ const firebaseConfig = {
 
 /* Initialize Firebase Database */
 const app = initializeApp(firebaseConfig)
-const auth = getAuth(app)
+// const auth = getAuth(app)
 const db = getFirestore(app)
-const emailWaitlistCol = collection(db, 'email_waitlist')
+// const emailWaitlistCol = collection(db, 'email_waitlist')
 
 {/** --- MAIN APP --- */}
 const Coming_Soon = () => { 
